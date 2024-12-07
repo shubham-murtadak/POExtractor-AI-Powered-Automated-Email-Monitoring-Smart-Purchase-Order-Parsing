@@ -1,4 +1,30 @@
-poenv/
-Store/
+# Ignore Python bytecode files
+*.pyc
+*.pyo
 __pycache__/
+
+# Ignore virtual environment directories
+poenv/
+
+# Ignore environment files (for sensitive data)
 .env
+
+# Ignore Store directories or files
+Store/
+
+# Ignore Backend-specific files
+backend/__pycache__/
+backend/*.log
+
+# Ignore frontend (React) dependencies and build files
+frontend/node_modules/
+frontend/.env
+frontend/build/
+
+# Ignore IDE/editor settings (Optional, if using VS Code or others)
+.vscode/
+.idea/
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
