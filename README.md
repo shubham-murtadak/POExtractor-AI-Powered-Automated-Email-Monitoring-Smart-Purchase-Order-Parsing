@@ -7,7 +7,7 @@
 
 ## 🌟 **Features**  
 🛠️ Our system comes packed with exciting functionalities:  
-1. **📬 Email Monitoring and Classification**  
+1. **📬 Automatic Email Monitoring and Classification**  
    - Automatically scans incoming emails.  
    - Identifies whether an email contains a **Purchase Order (PO)**.  
 
