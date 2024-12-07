@@ -50,8 +50,8 @@
 
 - **Email Monitoring**: `imap_tools`  
 - **Data Extraction**:  
-  - Fine-tuned **LLaMA 3.2** for classification tasks.  
-  - **Gemini-1.5-flash** for extracting details from image-based attachments.  
+  - **Fine Tuned LLaMA 3.2** for classification tasks.  
+  - **Fine Tuned LLAVA** for extracting details from image-based attachments.  
   - **LLaMA Parser** for unstructured content and PDFs.  
 - **Backend**: **FastAPI** (Python-based)  
 - **Frontend**: **React** (JavaScript-based UI)  
