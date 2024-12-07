@@ -20,8 +20,8 @@
      - **Word Documents** 📄  
 
 3. **🔍 Intelligent PO Parsing**  
-   - Powered by **LLaMA 3.2 fine-tuning** for classifying emails.
-   - **Gemini-1.5-flash** is used for precise data extraction from image POs.
+   - Powered by **Fine Tune LLaMA 3.2** for classifying emails.
+   - **Fine Tune LLAVA** is used for precise data extraction from image POs.
    - Integrates **LLaMA Parser** for extracting critical details from PDF POs like:  
      - Customer PO Number  
      - Item Name, Quantity, and Delivery Dates  
