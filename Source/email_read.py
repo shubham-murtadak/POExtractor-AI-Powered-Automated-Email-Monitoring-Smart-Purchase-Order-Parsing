@@ -24,13 +24,14 @@ with open(config_path) as file:
 
 def speak(text):
     try:
+        audio_file_path=os.path.join(PROJECT_HOME_PATH,'Data','Sound_mp3','output_mp3')
         #gtts API to convert text to speech 
         tts=gTTS(text,lang='en',slow=False) 
-        tts.save('output2.mp3')
+        tts.save(audio_file_path)
         # Initialize the mixer module
         pygame.mixer.init()
         # Load the mp3 file
-        pygame.mixer.music.load("output2.mp3")
+        pygame.mixer.music.load(audio_file_path)
         # Play the loaded mp3 file
         pygame.mixer.music.play()
         # Wait until the music finishes playing
@@ -45,15 +46,14 @@ def speak(text):
         print("file temporary remove successfuly1!!!")
 
 
-
-
 def read_email_from_email(username,configdata):
     ORG_EMAIL=configdata['mail']['ORG_EMAIL']
-    FROM_EMAIL=EMAIL
-    # FROM_EMAIL=configdata['mail']['FROM_EMAIL']+ORG_EMAIL
-    FROM_PWD=PASSWORD
-    # FROM_PWD=configdata['mail']['FROM_PWD']
     SMTP_SERVER=configdata['mail']['SMTP_SERVER']
+    FROM_EMAIL=EMAIL
+    FROM_PWD=PASSWORD
+
+    storage_dir=os.path.join(PROJECT_HOME_PATH,'Data','Extract_data')
+
     mail=MailBox(SMTP_SERVER).login(FROM_EMAIL,FROM_PWD)
 
     print("email account accesss success !!")
@@ -69,11 +69,43 @@ def read_email_from_email(username,configdata):
     print(count)
 
     if count>0:
-        text=username+", You have an Email From "+msg[0].from_+" ,with a Subject Saying "+msg[0].subject
+        for email in msg:
+            #Get senders email address or name 
+            email_holder=email.from_
+            #Get the subject
+            email_subject=email.subject
+            #Get the email date
+            ("%Y-%m-%d_%H-%M-%S")  # Format: 2024-12-07_14-30-00
+            email_date=email.date.strftime("%Y-%m-%d_%H-%M-%S")
+            #Get the email body
+            email_body=email.text 
+            #Define unique folder name to store attachments
+            folder_name = f"{email_holder.replace(' ', '_').replace('@', '_').replace('.', '_')}_{email_date}"
+            folder_path=os.path.join(storage_dir,folder_name)
 
-        print(text)
+            #create folder if it does not exit 
+            os.makedirs(folder_path,exist_ok=True)
 
-        speak(text)
+            text=f"{username} You have an Email From {email_holder} with a Subject Saying {email_subject}"
+
+            # Loop through attachments and save them
+            for att in email.attachments:
+                # Get the file extension of the attachment
+                file_extension = att.filename.split('.')[-1].lower()
+
+                # Check if the attachment is a PDF, JPG, DOCX, or other allowed types
+                allowed_extensions = ['pdf', 'jpg', 'jpeg', 'docx', 'png', 'xls', 'xlsx']
+                if file_extension in allowed_extensions:
+                    # Define the file path to save the attachment
+                    file_path = os.path.join(folder_path, att.filename)
+
+                    # Save the attachment
+                    with open(file_path, 'wb') as f:
+                        f.write(att.payload)
+                    print(f"Attachment {att.filename} saved to {file_path}")
+
+            speak(text)
+            print(text)
 
     else:
         print("You Dont have any new emails !!")
