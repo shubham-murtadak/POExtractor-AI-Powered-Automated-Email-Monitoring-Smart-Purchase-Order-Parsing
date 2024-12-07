@@ -19,7 +19,7 @@ async def get_project_info():
         "description": (
             "An AI-powered tool to classify and process purchase orders effortlessly! "
             "Automatically monitor emails, classify purchase orders, handle attachments, "
-            "and extract critical data using advanced models like LLaMA 3.2 and Gemini 1.5 Flash."
+            "and extract critical data using Fine Tuned advanced Multimodal LLM models like LLaMA 3.2 and LLAVA"
         ),
         "features": [
             "Automatic email monitoring and classification",
