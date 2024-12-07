@@ -7,32 +7,35 @@
 
 ## 🌟 **Features**  
 🛠️ Our system comes packed with exciting functionalities:  
+
 1. **📬 Automatic Email Monitoring and Classification**  
-   - Automatically scans incoming emails.  
-   - Identifies whether an email contains a **Purchase Order (PO)**.  
+   - Leverages `imap_tools` for seamless email monitoring.  
+   - Automatically identifies whether an email contains a **Purchase Order (PO)**.  
 
 2. **📂 Attachment Handling**  
    - Downloads and processes various attachment formats:  
      - **PDFs** 📝  
      - **Excel/CSV** 📊  
-     - **Images** 🖼️  
+     - **Images** 🖼️.  
      - **Word Documents** 📄  
 
 3. **🔍 Intelligent PO Parsing**  
-   - Extracts critical details:  
+   - Powered by **LLaMA 3.2 fine-tuning** for classifying emails.
+   - Powered by **gemini-1.5-flash** is used for precise data extraction from image POs
+   - Integrates **LLaMA Parser** for extracting critical details from pdf POs like:  
      - Customer PO Number  
      - Item Name, Quantity, and Delivery Dates  
      - Rate, Taxes, and Payment Terms  
-   - Handles unstructured data with advanced AI models.  
-
+   - Excels in handling unstructured data for precise results.
+   
 4. **🌐 User-Friendly Interface**  
-   - Displays extracted data in an intuitive UI.  
+   - Displays extracted data in an intuitive UI Uing FastAPI ,React.  
    - Allows manual corrections for missing or inaccurate fields.  
 
 5. **💡 Advanced Features (Under Development)**  
-   - Support for document links (e.g., Google Docs).  
+   - Document link support (e.g., Google Docs).  
    - Multi-category classification (e.g., spam, inquiries).  
-   - Confidence scores for predictions with manual feedback.  
+   - Confidence scores for predictions with manual feedback integration.  
 
 6. **⚡ Retry and Error Handling**  
    - Automatically retries failed extraction attempts.  
@@ -43,10 +46,21 @@
 
 ---
 
+## 🚧 **Technical Stack**  
+- **Email Monitoring**: `imap_tools`  
+- **Data Extraction**:  
+  - Fine-tuned **LLaMA 3.2** for classification tasks.  
+  - **Gemini Flash** for extracting details from image-based attachments.  
+  - **LLaMA Parser** for unstructured content and PDFs.  
+- **Backend**: Python, Flask  
+- **Frontend**: Intuitive UI for data review and correction.  
+
+---
+
 ## 🚧 **Project Status**  
 ⚠️ *This project is a work in progress!*  
-- We’re continuously improving features.  
-- Stay tuned for updates!  
+- New features and updates are continually being rolled out.  
+- Stay tuned for improvements in parsing accuracy and UI enhancements!  
 
 ---
 
@@ -57,7 +71,10 @@
 ---
 
 ## 👩‍💻 **Contribute**  
-Want to help make POExtractor even better? 🎉 Fork the repo, submit pull requests, or open issues with ideas!
+Want to help make POExtractor even better? 🎉  
+- Fork the repo.  
+- Submit pull requests.  
+- Open issues with ideas or suggestions!  
 
 ---
 
