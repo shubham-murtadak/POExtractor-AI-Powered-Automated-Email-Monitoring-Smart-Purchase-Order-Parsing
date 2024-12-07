@@ -21,15 +21,15 @@
 
 3. **🔍 Intelligent PO Parsing**  
    - Powered by **LLaMA 3.2 fine-tuning** for classifying emails.
-   - Powered by **gemini-1.5-flash** is used for precise data extraction from image POs
-   - Integrates **LLaMA Parser** for extracting critical details from pdf POs like:  
+   - **Gemini-1.5-flash** is used for precise data extraction from image POs.
+   - Integrates **LLaMA Parser** for extracting critical details from PDF POs like:  
      - Customer PO Number  
      - Item Name, Quantity, and Delivery Dates  
      - Rate, Taxes, and Payment Terms  
    - Excels in handling unstructured data for precise results.
    
 4. **🌐 User-Friendly Interface**  
-   - Displays extracted data in an intuitive UI Uing FastAPI ,React.  
+   - Displays extracted data in an intuitive UI built using **FastAPI** and **React**.  
    - Allows manual corrections for missing or inaccurate fields.  
 
 5. **💡 Advanced Features (Under Development)**  
@@ -47,13 +47,15 @@
 ---
 
 ## 🚧 **Technical Stack**  
+
 - **Email Monitoring**: `imap_tools`  
 - **Data Extraction**:  
   - Fine-tuned **LLaMA 3.2** for classification tasks.  
-  - **Gemini Flash** for extracting details from image-based attachments.  
+  - **Gemini-1.5-flash** for extracting details from image-based attachments.  
   - **LLaMA Parser** for unstructured content and PDFs.  
-- **Backend**: Python, Flask  
-- **Frontend**: Intuitive UI for data review and correction.  
+- **Backend**: **FastAPI** (Python-based)  
+- **Frontend**: **React** (JavaScript-based UI)  
+- **Database**: **SQLite** (for temporary data storage)  
 
 ---
 
@@ -81,5 +83,15 @@ Want to help make POExtractor even better? 🎉
 ### ✨ **Stay Connected**  
 ⭐ Star this repo if you’re excited!  
 🙌 Reach out to us for ideas, suggestions, or collaborations.  
+
+---
+
+## 📸 **Screenshots**
+
+Here's a preview of the **POExtractor** interface:
+
+![Frontend Screenshot](/screenshots/ui.png)
+
+This screenshot shows the **React** frontend where the extracted data is displayed for review and correction.
 
 ---
