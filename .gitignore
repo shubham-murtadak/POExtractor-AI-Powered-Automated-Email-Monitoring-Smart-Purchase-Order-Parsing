@@ -1,0 +1,4 @@
+poenv/
+Store/
+__pycache__/
+.env

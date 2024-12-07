@@ -1,0 +1,7 @@
+{
+    "mail": {
+        "ORG_EMAIL": "@gmail.com",
+        "SMTP_SERVER": "imap.gmail.com",
+        "SMTP_PORT": "993"
+    }
+}
