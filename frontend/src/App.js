@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import html2canvas from 'html2canvas';
+import * as XLSX from 'xlsx';
 
 function EmailList() {
   const [emails, setEmails] = useState([]);
@@ -49,6 +50,16 @@ function EmailList() {
     }
   };
 
+  // Function to export the table to an Excel file
+  const exportToExcel = () => {
+    const ws = XLSX.utils.json_to_sheet(emails); // Convert emails data to a worksheet
+    const wb = XLSX.utils.book_new(); // Create a new workbook
+    XLSX.utils.book_append_sheet(wb, ws, 'Emails'); // Append the worksheet to the workbook
+
+    // Create and trigger the download
+    XLSX.writeFile(wb, 'emails.xlsx');
+  };
+
   return (
     <div className="emails-section">
       <h1>POExtractor</h1>
@@ -60,6 +71,9 @@ function EmailList() {
 
       {showTable && !loading && emails.length > 0 ? (
         <div className="emails-table-container">
+          <button onClick={exportToExcel} className="export-excel">
+            Export to Excel
+          </button>
           <table className="emails-table">
             <thead>
               <tr>
@@ -107,7 +121,7 @@ function EmailList() {
                             <pre>{JSON.stringify(email.parsed_files_data[fileKey], null, 2)}</pre>
                           </div>
                         ))}
-                        
+
                         {/* Button to download parsed data as image */}
                         <button className="download-parsed-data" onClick={() => downloadParsedDataAsImage(index)}>
                           Download Parsed Data as Image

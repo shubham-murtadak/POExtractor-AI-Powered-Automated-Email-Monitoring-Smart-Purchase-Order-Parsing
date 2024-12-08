@@ -30,6 +30,20 @@ llm= ChatGroq(model="mixtral-8x7b-32768",temperature=0,max_tokens=None,timeout=N
 
 # Function To Get Single Source Responses
 def classify_email(subject,body):
+    """
+    * method: classify_email
+    * description: Method to classify an email as either a purchase order-related email ("Yes") or not ("No") based on the subject and body.
+    * return: JSON response with classification ("Yes" or "No") and confidence percentage.
+    *
+    * who             when           version  change (include bug# if apply)
+    * ----------      -----------    -------  ------------------------------
+    * Shubham M      08-DEC-2024       1.0      initial creation
+    *
+    * Parameters
+    *   subject (str): The subject of the email.
+    *   body (str): The body content of the email.
+    """
+
  
     # Dynamic Prompt
     ss_template = """
@@ -90,97 +104,8 @@ def classify_email(subject,body):
         print(f"Error: {e}")
 
 if __name__=='__main__':
-    # while(True):
-        # doctype=input('select your doctype :')
-        # doclist=[doctype]
-        # question=input("Enter your question :")
-        # if(question=='break'):
-        #     break
-
-    # subject = "Purchase Order"
-    # body = """
-    # Dear Mam,
-
-    # Please find attached herewith our Purchase Order.
-
-    # Regards,
-
-    # Mamta
-
-    # ---
-
-    # Aakash Ele (India)
-    # 308, K. K. Gupta Ind. Est.,
-    # R. P. Road,
-    # Mulund (W)
-    # Mumbai-400 080
-
-    # One attachment - Scanned by Gmail
-    # """
-    # subject = "Required packing slip on polybag & box"
-    # body = """
-    # Dear Sir,
-
-    # We have to inform you that at inward inspection time the packing slip on the polybag & box not receive in your material as per attached images for your references.
-
-    # So implement this on priority in the next lot otherwise we will not accept the material for inward.
-
-    # Regards,
-    # """
-
-    # subject = "Re: VF-161/2024/10/30 RFQ-EM69551/EM69125"
-    # body = """
-    # Dear sir,
-
-    # Please inform status of quotation No: VF-161/2024/10/30
-
-    # Thanks & Regards,
-
-    # AASHA
-
-    # On Tue, Nov 5, 2024 at 12:49 PM <sales@vaishnavfastners.com> wrote:
-    # Dear sir,
-
-    # Please inform status of quotation No: VF-161/2024/10/30
-
-    # Thanks & Regards,
-
-    # Anjul Shrivastav
-
-    # 11/12, Sethia Industrial Park,
-    # """
-    # 
-    subject = "Re: Re: Re: VF-161/2024/10/30 RFQ-EM69551/EM69125"
-    body = """Dear Sir, 
-    Please find attached herewith Quotation No: VF-161/2024/10/30 for your reference.
-
-    Thanks & Regards, 
-    Aasha
-
-    On Tue, Oct 22, 2024 at 12:35 PM Zodge <[email protected]> wrote: 
-    Dear Sir, PFA drawing, Kindly share the quotation along with MOQ. 
-    BR/T Zodge 
-
-    On Tue, Nov 5, 2024 at 12:49 PM sales@vaishnavfastners.com <https://www.google.com/url?sa=E&source=gmail&q=mailto:sales@vaishnavfastners.com> wrote: 
-    Dear sir, Please inform status of quotation No: VF-161/2024/10/30 
-    Thanks & Regards, 
-    Anjul Shrivastav 
-    11/12, Sethia Industrial Park, 
-
-    On Thu, Nov 7, 2024 at 3:09 PM Aasha wrote: 
-    Dear Sir, Please inform status of quotation No: VF-161/2024/10/30 
-    Thanks & Regards, 
-    Aasha
-    """
-
-
-    # subject="Purchase Order"
-    # body="Dear Mam, Please find attached herewith our Purchase Order.Regards,Mamta"
+    subject="Purchase Order"
+    body="Dear Mam, Please find attached herewith our Purchase Order.Regards,Mamta"
     ans=classify_email(subject,body)
-    # print(ans)
-    print()
-
-    # history=get_session_history('panks87')
-
 
 

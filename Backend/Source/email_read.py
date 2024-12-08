@@ -1,24 +1,20 @@
-import imap_tools
-from imap_tools import MailBox,AND,A
+import os
+import sys
 import getpass
 import json 
-import os 
+import imap_tools
 from gtts import gTTS
 import playsound
 import pygame
-
-
-import sys
-import os
+from imap_tools import MailBox,AND,A
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 from classification import classify_email
-
+from parse import parsed_pdf_data,parsed_excel_data
 from dotenv import load_dotenv
 
-from classification import classify_email
-from parse import parsed_pdf_data,parsed_excel_data
-
 load_dotenv()
+
+
 
 #Load env variables
 PROJECT_HOME_PATH=os.getenv('PROJECT_HOME_PATH')
@@ -34,6 +30,19 @@ with open(config_path) as file:
 
 
 def speak(text):
+    """
+    * method: speak
+    * description: Method to convert provided text into speech and play the audio.
+    * return: None
+    *
+    * who             when           version  change (include bug# if apply)
+    * ----------      -----------    -------  ------------------------------
+    * Shubham M      07-DEC-2024       1.0      initial creation
+    *
+    * Parameters
+    *   text (str): The text to be converted into speech.
+    """
+
     try:
         audio_file_path=os.path.join(PROJECT_HOME_PATH,'Data','Sound_mp3','output_mp3')
         #gtts API to convert text to speech 
@@ -58,6 +67,20 @@ def speak(text):
 
 
 def read_email_from_email(username="shubham", configdata=config):
+    """
+    * method: read_email_from_email
+    * description: Method to fetch and parse unread emails from the specified email account, classify them, and process any attachments (PDF, Excel, etc.).
+    * return: List of dictionaries containing email data, classification results, and parsed file data.
+    *
+    * who             when           version  change (include bug# if apply)
+    * ----------      -----------    -------  ------------------------------
+    * Shubham M        07-DEC-2024    1.0        initial creation
+    *
+    * Parameters
+    *  username (str): The username for the email account (default is "shubham").
+    *  configdata (dict): Configuration data containing mail server details (default is `config`).
+    """
+
     ORG_EMAIL = configdata['mail']['ORG_EMAIL']
     SMTP_SERVER = configdata['mail']['SMTP_SERVER']
     FROM_EMAIL = EMAIL

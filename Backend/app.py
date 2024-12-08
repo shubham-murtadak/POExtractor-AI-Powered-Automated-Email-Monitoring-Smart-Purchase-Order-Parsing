@@ -18,6 +18,19 @@ app.add_middleware(
 
 @app.get("/api/project-info")
 async def get_project_info():
+    """
+    * method: get_project_info
+    * description: FastAPI endpoint to fetch and return project-related email data by calling `read_email_from_email`.
+    * return: JSON response containing parsed email data.
+    *
+    * who             when           version  change (include bug# if apply)
+    * ----------      -----------    -------  ------------------------------
+    * Shubham M      07-DEC-2024        1.0      initial creation
+    *
+    * Parameters
+    *   None
+    """
+
     return read_email_from_email()
 
 if __name__ == '__main__':

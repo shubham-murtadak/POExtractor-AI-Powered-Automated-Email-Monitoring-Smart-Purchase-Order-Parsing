@@ -31,6 +31,19 @@ llm = ChatGoogleGenerativeAI(model='gemini-1.5-pro', google_api_key=GEMINI_API_K
 gemini_embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001", google_api_key=GEMINI_API_KEY)
 
 def parsed_pdf_data(pdf_path):
+    """
+    * method: parsed_pdf_data
+    * description: Method to parse a provided PDF file (purchase order) and extract specified fields into a structured JSON format.
+    * return: Parsed JSON data as a Python dictionary containing purchase order details.
+    *
+    * who             when           version  change (include bug# if apply)
+    * ----------      -----------    -------  ------------------------------
+    * Shubham M        07-DEC-2024    1.0      initial creation
+    *
+    * Parameters
+    *   pdf_path (str): The path to the PDF file to be parsed.
+    """
+
     # Define the instruction for LlamaParser
     instruction = """
         You are a PDF parser specializing in purchase orders. Your task is to extract the following fields from the document and structure them into a JSON format. Ensure all mandatory fields are always present, and optional fields are included only if available.
@@ -92,6 +105,19 @@ def parsed_pdf_data(pdf_path):
     return data_dict
 
 def parsed_excel_data(excel_path):
+    """
+    * method: parsed_excel_data
+    * description: Method to parse a provided Excel file (purchase order data) and extract specified fields into a structured JSON format.
+    * return: Parsed JSON data as a Python dictionary containing purchase order details.
+    *
+    * who             when           version  change (include bug# if apply)
+    * ----------      -----------    -------  ------------------------------
+    * Shubham M        07-DEC-2024     1.0      initial creation
+    *
+    * Parameters
+    *   excel_path (str): The path to the Excel file to be parsed.
+    """
+
     loader = UnstructuredExcelLoader(excel_path, mode="elements")
     docs = loader.load()
     print(len(docs))
