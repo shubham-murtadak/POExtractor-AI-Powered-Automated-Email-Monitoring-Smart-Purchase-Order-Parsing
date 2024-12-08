@@ -88,7 +88,6 @@ def classify_email(subject,body):
     )
     
     try:
-            # result=conversational_rag_chain.invoke({"question": question,"no_of_classes":no_of_classes,"class_list":class_list,"context":docs})
             result=rag_chain.invoke({"subject":subject,"body":body})
             # print("result is :",result)
             result=result.content
