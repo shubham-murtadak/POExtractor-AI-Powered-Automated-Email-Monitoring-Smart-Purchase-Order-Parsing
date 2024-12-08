@@ -21,10 +21,6 @@ PROJECT_HOME_PATH=os.getenv('PROJECT_HOME_PATH')
 LLAMA_CLOUD_API_KEY=os.getenv('LLAMA_CLOUD_API_KEY')
 
 
-#create instance of llm model 
-# llm= ChatGoogleGenerativeAI(model='gemini-1.5-pro',google_api_key="AIzaSyD-XmZVwlrHO_SqOM0qzHx9eUF_t6WfuUI",temperature=0)
-# llm= ChatGoogleGenerativeAI(model='gemini-1.5-pro',google_api_key=GEMINI_API_KEY,temperature=0)
-
 llm= ChatGroq(model="mixtral-8x7b-32768",temperature=0,max_tokens=None,timeout=None,max_retries=2,api_key=GROQ_API_KEY)
 
 
