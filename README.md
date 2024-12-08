@@ -105,11 +105,11 @@ Want to help make **POExtractor** even better? 🎉
 
 Here’s a preview of the **POExtractor** interface in action! 🔥
 
-![Frontend Screenshot](screenshots/uia.png)  
-![Frontend Screenshot](screenshots/uib.png)  
-![Frontend Screenshot](screenshots/uic.png)  
-![Frontend Screenshot](screenshots/uid.png)  
-![Frontend Screenshot](screenshots/uie.png)  
+![Frontend Screenshot](screenshots/uia.png)
+![Frontend Screenshot](screenshots/uib.png)
+![Frontend Screenshot](screenshots/uic.png)
+![Frontend Screenshot](screenshots/uid.png)
+![Frontend Screenshot](screenshots/uie.png) 
 
 This screenshot shows the **React** frontend where the extracted data is displayed for easy review and correction. ✨
 
