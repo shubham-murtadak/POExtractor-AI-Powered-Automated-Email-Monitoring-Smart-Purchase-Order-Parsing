@@ -90,10 +90,10 @@ Want to help make POExtractor even better? 🎉
 
 Here's a preview of the **POExtractor** interface:
 ![Frontend Screenshot](screenshots/ui1.png)
-
-![Frontend Screenshot2](screenshots/ui2.png)
+![Frontend Screenshot](screenshots/ui2.png)
 ![Frontend Screenshot](screenshots/ui3.png)
 ![Frontend Screenshot](screenshots/ui4.png)
+![Frontend Screenshot](screenshots/ui5.png)
 
 This screenshot shows the **React** frontend where the extracted data is displayed for review and correction.
 
