@@ -1,6 +1,10 @@
 import uvicorn
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from Source.email_read import read_email_from_email
+import nest_asyncio
+nest_asyncio.apply()
+
 
 app = FastAPI()
 
@@ -14,21 +18,7 @@ app.add_middleware(
 
 @app.get("/api/project-info")
 async def get_project_info():
-    return {
-        "title": "POExtractor - Smart Purchase Order Parsing",
-        "description": (
-            "An AI-powered tool to classify and process purchase orders effortlessly! "
-            "Automatically monitor emails, classify purchase orders, handle attachments, "
-            "and extract critical data using Fine Tuned advanced Multimodal LLM models like LLaMA 3.2 and LLAVA"
-        ),
-        "features": [
-            "Automatic email monitoring and classification",
-            "Attachment handling (PDFs, Images, Excel, and more)",
-            "AI-powered data extraction",
-            "User-friendly interface for data review and corrections",
-        ],
-    }
-
+    return read_email_from_email()
 
 if __name__ == '__main__':
     # Run the FastAPI app using `uvicorn` when running directly

@@ -5,3 +5,16 @@ python-dotenv==1.0.1
 pygame==2.6.1
 fastapi==0.115.6 
 uvicorn==0.32.1
+transformers==4.47.0
+torch==2.5.1
+langchain==0.3.10
+langchain-community==0.3.10 
+langchain_core==0.3.22 
+langchain_experimental==0.3.3
+langchain_ollama==0.2.1
+llama_parse==0.5.17
+langchain_groq==0.2.1
+langchain_google_genai==2.0.6
+openpyxl==3.1.5
+unstructured==0.16.9
+firebase-admin==6.6.0
