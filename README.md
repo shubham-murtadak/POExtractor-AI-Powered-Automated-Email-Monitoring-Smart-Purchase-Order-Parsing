@@ -66,22 +66,20 @@
 - **Stay tuned** for improvements in parsing accuracy, UI enhancements, and new integrations. 🚀
 
 ---
+---
 
 ## 🚀 **Future Plans & Updates**  
-
 We have exciting plans for **POExtractor**, including:  
-- **Fine-Tuned LLaMA 3.2** to Enhanced Classification and **Fine-Tuned LLAVA** for Image Data Extraction.
-- **Real-time Document Link Support**: Support for document links (e.g., Google Docs, cloud links).  
-- **AI-Powered Feedback Loop**: Implementing feedback to continuously improve prediction accuracy.  
-- **Multi-category Classification**: For various PO types, spam, and inquiries.  
-- **Faster and Smarter AI Models**: Continuous optimization for performance improvements. 
-- **Expansion for HR Professionals**: A future update will expand POExtractor to classify emails based on **job openings** and perform similar data extraction for recruitment processes. 
+- **🤖Fine-Tuned LLaMA 3.2** to Enhanced Classification and **🔍Fine-Tuned LLAVA** for Image Data Extraction.
+- **🌐 Real-time Document Link Support**: Support for document links (e.g., **Google Docs**, cloud links).  
+- **💬 AI-Powered Feedback Loop**: Implementing feedback to continuously improve prediction accuracy.  
+- **🏷️ Multi-category Classification**: For various PO types, **❌ spam**, and **📩 inquiries**.  
+- **⚡ Faster and Smarter AI Models**: Continuous optimization for performance improvements.  
+- **👥 Expansion for HR Professionals**: A future update will expand POExtractor to classify emails based on **💼 job openings** and perform similar data extraction for recruitment processes.
 ---
 
 ## 👨‍💻 **Built By**  
-✨ **Shubham Murtadak**  
-*GenAI Engineer* 💻💡  
-
+✨ **Shubham Murtadak**  *GenAI Engineer* 💻💡  
 ---
 
 ## 👩‍💻 **Contribute**  
