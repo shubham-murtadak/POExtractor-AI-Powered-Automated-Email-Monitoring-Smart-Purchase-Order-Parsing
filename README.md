@@ -1,7 +1,8 @@
 ---
-# **📧 POExtractor: Smart Purchase Order Parsing**  
+
+# 📧 POExtractor: 🤖 AI-Powered Automated Email Monitoring & 📝 Smart Purchase Order Parsing
 🚀 *AI-powered tool to classify and process purchase orders effortlessly!*  
-💼 **Built for B2B businesses to streamline purchase order management and optimize workflows.**  
+💼 **Built for B2B businesses to streamline purchase order management and optimize workflows.**
 
 ---
 
@@ -14,39 +15,33 @@
    - ⏱️ **Real-time PO classification** as emails arrive!
 
 2. **📂 Attachment Handling**  
-   - Downloads and processes various attachment formats with ease:  
+   - Downloads and processes various attachment formats:  
      - **PDFs** 📝  
      - **Excel/CSV** 📊  
      - **Images** 🖼️  
      - **Word Documents** 📄  
-   - 📥 Supports multiple formats, so no matter what attachment type you have, we’ve got it covered!
+   - 📥 Supports multiple formats, ensuring no attachment is left behind!
 
 3. **🔍 Intelligent PO Parsing**  
-   - Powered by **Fine-Tuned LLaMA 3.2** for classifying emails intelligently.  
-   - **Fine-Tuned LLAVA** is used for precise data extraction from **image-based POs**.  
-   - **LLaMA Parser** extracts critical details from **PDF POs**, such as:  
+   - Powered by **Mixtral-8x7B-32768** OpenSource LLM for email classification.  
+   - **LLAMA Parser** extracts key details from **PDF POs**, such as:  
      - Customer PO Number 📑  
      - Item Name, Quantity, Delivery Dates 📦  
      - Rate, Taxes, Payment Terms 💵  
-   - 🧠 **AI-powered accuracy** that excels in handling unstructured data, ensuring precise results.
+   - **LangChain Unstructured Parser** for precise data extraction from **Excel/CSV POs**.  
+   - 🧠 **AI-powered accuracy** for handling unstructured data with precision.
 
 4. **🌐 User-Friendly Interface**  
    - Extracted data is displayed in an intuitive UI built using **FastAPI** (backend) and **React** (frontend).  
-   - ✍️ Allows manual corrections for missing or inaccurate fields, ensuring data is always on point.
+   - ✍️ Manual corrections for missing or inaccurate fields to ensure data accuracy.
 
-5. **💡 Advanced Features (Under Development)**  
-   - 📄 **Document link support** (e.g., Google Docs) coming soon!  
-   - 🏷️ **Multi-category classification** (e.g., spam, inquiries).  
-   - 🧮 **Confidence scores** for predictions with manual feedback integration.  
-   - **Real-time document updates** and automated data extraction improvements.
+5. **⚡ Retry and Error Handling**  
+   - **Automatic retries** for failed extraction attempts.  
+   - 🚨 Errors and missing fields are highlighted for easy resolution.
 
-6. **⚡ Retry and Error Handling**  
-   - **Automatic retries** for failed extraction attempts, so no PO gets left behind.  
-   - 🚨 Errors and missing fields are highlighted for easy resolution, minimizing manual effort.
-
-7. **📈 AI-Powered Summarization**  
-   - Summarizes email bodies and attachments for a quick overview, so you never miss critical information! 📋  
-   - ⚡ Fast and reliable summarization, saving you time and boosting productivity.
+6. **📈 AI-Powered Summarization**  
+   - Summarizes email bodies and attachments for a quick overview.  
+   - ⚡ Fast, reliable summarization for enhanced productivity.
 
 ---
 
@@ -56,9 +51,9 @@
 
 - **Email Monitoring**: `imap_tools`  
 - **Data Extraction**:  
-  - **Fine-Tuned LLaMA 3.2** for email classification.  
-  - **Fine-Tuned LLAVA** for extracting details from image-based POs.  
-  - **LLaMA Parser** for unstructured content and PDFs.  
+  - **Mixtral-8x7B-32768** OpenSource LLM for email classification.  
+  - **LLAMA Parser** for extracting details from **PDF POs**.  
+  - **LangChain Unstructured Parser** for **Excel/CSV POs**.  
 - **Backend**: **FastAPI** (Python-based)  
 - **Frontend**: **React** (JavaScript-based UI)  
 - **Database**: **SQLite** (for temporary data storage)
@@ -72,11 +67,15 @@
 
 ---
 
-## 🚀 **Upcoming Updates**  
-- **Fine-Tuned LLaMA 3.2** and **LLAVA** integration for enhanced classification and data extraction.  
-- Currently, we are using the **open-source Mixtral-8x7B-32768 model**, but the next steps will focus on implementing **Fine-Tuned LLaMA 3.2** and **LLAVA** for more accurate and efficient processing.  
-- **Expansion for HR Professionals**: In future updates, **POExtractor** will be expanded to classify emails based on **job openings** and perform similar **data extraction** for recruitment processes.  
+## 🚀 **Future Plans & Updates**  
 
+We have exciting plans for **POExtractor**, including:  
+- **Fine-Tuned LLaMA 3.2** to Enhanced Classification and **Fine-Tuned LLAVA** for Image Data Extraction.
+- **Real-time Document Link Support**: Support for document links (e.g., Google Docs, cloud links).  
+- **AI-Powered Feedback Loop**: Implementing feedback to continuously improve prediction accuracy.  
+- **Multi-category Classification**: For various PO types, spam, and inquiries.  
+- **Faster and Smarter AI Models**: Continuous optimization for performance improvements. 
+- **Expansion for HR Professionals**: A future update will expand POExtractor to classify emails based on **job openings** and perform similar data extraction for recruitment processes. 
 ---
 
 ## 👨‍💻 **Built By**  
@@ -101,33 +100,17 @@ Want to help make **POExtractor** even better? 🎉
 
 ---
 
-## 📸 **Screenshots**
+## 📸 **Screenshots**  
 
+Here’s a preview of the **POExtractor** interface in action! 🔥  
 
-Here’s a preview of the **POExtractor** interface in action! 🔥
-
-![Frontend Screenshot](screenshots/uia.png)
-![Frontend Screenshot](screenshots/uib.png)
-![Frontend Screenshot](screenshots/uic.png)
-![Frontend Screenshot](screenshots/uid.png)
-![Frontend Screenshot](screenshots/uie.png) 
+![Frontend Screenshot](screenshots/uia.png)  
+![Frontend Screenshot](screenshots/uib.png)  
+![Frontend Screenshot](screenshots/uic.png)  
+![Frontend Screenshot](screenshots/uid.png)  
+![Frontend Screenshot](screenshots/uie.png)  
 
 This screenshot shows the **React** frontend where the extracted data is displayed for easy review and correction. ✨
-
----
-
-### 💡 **What's Coming Next?**
-
-🚀 **Upcoming Features** (Under development):
-- 🔄 **Real-time document link support** (e.g., Google Docs, other cloud links).  
-- 🏷️ **Category Classification** for POs, inquiries, and more!  
-- 💬 **AI-powered feedback loop** to continuously improve prediction accuracy.
-
----
-
-🔧 **More Cool Features You Can Expect Soon**:
-- 🛠️ **Faster data extraction** with better error handling.  
-- ⚙️ **Smarter AI models** fine-tuned for optimal performance.
 
 ---
 
