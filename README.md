@@ -103,16 +103,8 @@ Want to help make **POExtractor** even better? 🎉
 
 ## 📸 **Screenshots**
 
-<<<<<<< HEAD
-Here's a preview of the **POExtractor** interface:
-![Frontend Screenshot](screenshots/uia.png)
-![Frontend Screenshot](screenshots/uib.png)
-![Frontend Screenshot](screenshots/uic.png)
-![Frontend Screenshot](screenshots/uid.png)
-![Frontend Screenshot](screenshots/uie.png)
-=======
+
 Here’s a preview of the **POExtractor** interface in action! 🔥
->>>>>>> c249b765dfcf41a16f9c9d7e9c256e46d4d9994b
 
 ![Frontend Screenshot](screenshots/uia.png)
 ![Frontend Screenshot](screenshots/uib.png)
