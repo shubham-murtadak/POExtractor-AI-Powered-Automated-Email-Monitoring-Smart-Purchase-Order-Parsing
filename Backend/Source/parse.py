@@ -4,7 +4,7 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.prompts.prompt import PromptTemplate
 from typing import Tuple, List, Optional
 from dotenv import load_dotenv
-from llama_parse import LlamaParse  # changes
+from llama_parse import LlamaParse 
 from langchain_groq import ChatGroq
 from langchain_google_genai import (ChatGoogleGenerativeAI,HarmBlockThreshold,HarmCategory,)
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
