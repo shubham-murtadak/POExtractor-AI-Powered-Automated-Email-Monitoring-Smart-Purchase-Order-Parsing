@@ -19,16 +19,9 @@ load_dotenv()
 
 
 #loading environment variables 
-GEMINI_API_KEY=os.getenv('GEMINI_API_KEY')
 GROQ_API_KEY=os.getenv('GROQ_API_KEY')
 PROJECT_HOME_PATH=os.getenv('PROJECT_HOME_PATH')
 LLAMA_CLOUD_API_KEY=os.getenv('LLAMA_CLOUD_API_KEY')
-
-#create instance of llm model 
-llm = ChatGoogleGenerativeAI(model='gemini-1.5-pro', google_api_key=GEMINI_API_KEY, temperature=0)
-
-#define gemini embeddings
-gemini_embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001", google_api_key=GEMINI_API_KEY)
 
 def parsed_pdf_data(pdf_path):
     """
