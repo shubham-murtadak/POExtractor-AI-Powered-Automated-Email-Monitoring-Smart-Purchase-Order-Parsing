@@ -74,7 +74,8 @@ We have exciting plans for **POExtractor**, including:
 - **🌐 Real-time Document Link Support**: Support for document links (e.g., **Google Docs**, cloud links).  
 - **💬 AI-Powered Feedback Loop**: Implementing feedback to continuously improve prediction accuracy.  
 - **🏷️ Multi-category Classification**: For various PO types, **❌ spam**, and **📩 inquiries**.  
-- **⚡ Faster and Smarter AI Models**: Continuous optimization for performance improvements.  
+- **⚡ Faster and Smarter AI Models**: Continuous optimization for performance improvements.
+- 🤖 AI Agent for Answering Based on Attachments: Introducing an Agentic RAG (Retrieval-Augmented Generation) AI agent to provide accurate answers based on attached documents.
 - **👥 Expansion for HR Professionals**: A future update will expand POExtractor to classify emails based on **💼 job openings** and perform similar data extraction for recruitment processes.
 ---
 
