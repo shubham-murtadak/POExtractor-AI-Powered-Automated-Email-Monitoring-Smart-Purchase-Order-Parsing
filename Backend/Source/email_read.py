@@ -91,7 +91,7 @@ def read_email_from_email(username="shubham", configdata=config):
     mail = MailBox(SMTP_SERVER).login(FROM_EMAIL, FROM_PWD)
 
     print("Email account access success!")
-    messages = mail.fetch(A(seen=False), mark_seen=False)
+    messages = mail.fetch(A(seen=False), mark_seen=True)
     print("Messages fetched successfully!")
     msg_list = list(messages)
 
@@ -164,7 +164,7 @@ def read_email_from_email(username="shubham", configdata=config):
 
                 # Speak email summary
                 text = f"{username}, You have an email from {email_holder} with a subject saying {email_subject}"
-                speak(text)
+                # speak(text)
                 print(text)
                 
                 # Add email data to the list
